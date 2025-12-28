@@ -1,4 +1,4 @@
-import { FaGraduationCap, FaCalendar, FaMapMarkerAlt, FaBook, FaAward } from 'react-icons/fa';
+import { FaGraduationCap, FaCalendar, FaMapMarkerAlt, FaBook } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import AnimatedSection from './AnimatedSection';
 
@@ -33,7 +33,7 @@ const Education = () => {
       degree: "Baccalauréat Général",
       school: "Lycée Germaine Tillion",
       period: "2020 – 2023",
-      location: "Le Bourget",
+      location: "Paris",
       status: "Diplômé",
       color: "from-green-500 to-emerald-500",
       description: "Spécialités Mathématiques et Sciences Économiques et Sociales. Mention Assez Bien.",
@@ -155,39 +155,6 @@ const Education = () => {
             </AnimatedSection>
           ))}
         </div>
-
-        {/* Section certificats */}
-        <AnimatedSection delay={0.6}>
-          <div className="mt-20 bg-gradient-to-r from-blue-50 to-cyan-50 rounded-2xl p-8 border border-blue-100">
-            <div className="flex items-center justify-between mb-8">
-              <div>
-                <h3 className="text-2xl font-bold text-gray-800 mb-2">Certifications & Récompenses</h3>
-                <p className="text-gray-600">Formations complémentaires et reconnaissances</p>
-              </div>
-              <FaAward className="text-4xl text-blue-500" />
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {[
-                { title: "Méthodes Agiles", org: "CFA Insta", year: "2024" },
-                { title: "Développement Web Avancé", org: "OpenClassrooms", year: "2023" },
-                { title: "Git & GitHub", org: "Udemy", year: "2023" }
-              ].map((cert, idx) => (
-                <motion.div
-                  key={idx}
-                  whileHover={{ y: -5 }}
-                  className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition-shadow"
-                >
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                    <span className="text-blue-600 font-bold">{cert.year}</span>
-                  </div>
-                  <h4 className="font-bold text-gray-800 mb-2">{cert.title}</h4>
-                  <p className="text-gray-600">{cert.org}</p>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </AnimatedSection>
       </div>
     </section>
   );
