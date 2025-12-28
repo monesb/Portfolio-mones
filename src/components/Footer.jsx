@@ -105,7 +105,7 @@ const Footer = () => {
               Pour découvrir l'intégralité de mon parcours, mes expériences et compétences détaillées
             </p>
             <a 
-              href="/CV mones Boubahri.pdf"
+              href="/CV-mones-Boubahri.pdf"
               download
               className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-semibold rounded-lg transition-all hover:scale-105 shadow-lg"
             >
