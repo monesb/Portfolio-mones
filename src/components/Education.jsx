@@ -12,8 +12,7 @@ const Education = () => {
       location: "Paris",
       status: "En cours",
       color: "from-blue-500 to-cyan-500",
-      description: "Formation en alternance (2 jours école, 3 jours entreprise). Acquisition de compétences avancées en développement logiciel, architecture des systèmes et gestion de projet.",
-      courses: ["Algorithmique avancée", "Bases de données", "Développement web", "Gestion de projet", "Sécurité informatique"],
+      description: "Formation en alternance (2 jours école, 3 jours entreprise).",
       highlight: true
     },
     {
@@ -24,8 +23,7 @@ const Education = () => {
       location: "Paris",
       status: "Diplômé",
       color: "from-purple-500 to-pink-500",
-      description: "Option SLAM (Solutions Logicielles et Applications Métiers). Formation axée sur le développement d'applications et la gestion de parc informatique.",
-      courses: ["Développement web", "Programmation orientée objet", "Réseaux", "Cybersécurité", "Gestion de projet"],
+      description: "Option SLAM (Solutions Logicielles et Applications Métiers).",
       highlight: false
     },
     {
@@ -33,11 +31,10 @@ const Education = () => {
       degree: "Baccalauréat Général",
       school: "Lycée Germaine Tillion",
       period: "2020 – 2023",
-      location: "Paris",
+      location: "Le Bourget",
       status: "Diplômé",
       color: "from-green-500 to-emerald-500",
-      description: "Spécialités Mathématiques et Sciences Économiques et Sociales. Mention Assez Bien.",
-      courses: ["Mathématiques", "SES", "Histoire-Géographie", "Philosophie", "Anglais"],
+      description: "Spécialités Mathématiques et Sciences Économiques et Sociales",
       highlight: false
     }
   ];
@@ -109,25 +106,7 @@ const Education = () => {
                     
                     <p className="text-gray-700 mb-6">{formation.description}</p>
                     
-                    <div>
-                      <h4 className="font-bold text-gray-800 mb-3 flex items-center">
-                        <FaBook className="mr-2 text-blue-500" />
-                        Principaux enseignements
-                      </h4>
-                      <div className="flex flex-wrap gap-2">
-                        {formation.courses.map((course, idx) => (
-                          <motion.span
-                            key={idx}
-                            initial={{ scale: 0 }}
-                            animate={{ scale: 1 }}
-                            transition={{ delay: idx * 0.1 }}
-                            className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm"
-                          >
-                            {course}
-                          </motion.span>
-                        ))}
-                      </div>
-                    </div>
+                    {/* SECTION RETIRÉE (celle qui causait l'erreur) */}
                   </div>
                 </motion.div>
 
