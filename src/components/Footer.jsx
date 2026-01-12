@@ -91,29 +91,7 @@ const Footer = () => {
             </div>
           </motion.div>
         </div>
-
-        {/* Section CV */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.3 }}
-          className="mt-12 mb-8 text-center"
-        >
-          <div className="inline-block p-6 bg-gradient-to-r from-gray-800/50 to-gray-900/50 rounded-2xl border border-white/10">
-            <h4 className="text-white font-bold text-lg mb-3">📋 Téléchargez mon CV complet</h4>
-            <p className="text-gray-300 mb-4 max-w-md mx-auto">
-              Pour découvrir l'intégralité de mon parcours, mes expériences et compétences détaillées
-            </p>
-            <a 
-              href="/CV-mones-Boubahri.pdf"
-              download
-              className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-semibold rounded-lg transition-all hover:scale-105 shadow-lg"
-            >
-              <FaFileDownload className="mr-2" />
-              Télécharger mon CV (PDF)
-            </a>
-          </div>
-        </motion.div>
+        
 
         {/* Ligne de séparation */}
         <div className="my-8 border-t border-gray-800"></div>

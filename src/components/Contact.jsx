@@ -118,7 +118,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="text-white font-bold text-lg">LinkedIn</h4>
-                    <p className="text-blue-100">Connectons-nous</p>
+                    <p className="text-blue-100">Connectons-vous</p>
                   </div>
                 </div>
               </motion.a>

@@ -177,16 +177,6 @@ const Projects = () => {
           transition={{ delay: 0.8 }}
           className="mt-16 text-center"
         >
-          <p className="text-gray-300 text-lg mb-6 max-w-3xl mx-auto">
-            Ces projets démontrent ma polyvalence et ma capacité à m'adapter à différentes stacks techniques,
-            tout en développant des applications complètes et fonctionnelles.
-          </p>
-          <a 
-            href="#contact" 
-            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold rounded-xl transition-all hover:scale-105"
-          >
-            <span>Vous avez un projet similaire ? Discutons-en !</span>
-          </a>
         </motion.div>
       </div>
     </section>

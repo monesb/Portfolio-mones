@@ -9,11 +9,11 @@ const Experience = () => {
   const experiences = [
     {
       id: 1,
-      title: "Développeur Web (Stage)",
+      title: "Développeur Web (Alternance)",
       company: "CHEYSSOI PARIS",
-      period: "06/10/2024 - 03/01/2025",
+      period: "06/09/2024 - 03/07/2025",
       location: "Paris",
-      type: "Stage",
+      type: "Alternance",
       color: "from-blue-500 to-cyan-500",
       icon: <FaCode />,
       highlights: [
@@ -134,9 +134,11 @@ const Experience = () => {
                       <span className={`text-sm font-semibold px-3 py-1 rounded-full ${
                         exp.type === 'Stage' 
                           ? 'bg-blue-100 text-blue-800'
+                          : exp.type === 'Alternance'
+                          ? 'bg-green-100 text-green-800'
                           : 'bg-yellow-100 text-yellow-800'
                       }`}>
-                        {exp.type}
+                        {exp.id === 2 ? "Stage" : exp.type}
                       </span>
                     </div>
                     
@@ -192,7 +194,7 @@ const Experience = () => {
                 
                 <div className="mt-4 md:mt-0">
                   <span className={`inline-block px-4 py-2 rounded-full text-white font-bold bg-gradient-to-r ${activeExperience.color}`}>
-                    {activeExperience.type}
+                    {activeExperience.id === 2 ? "Stage" : activeExperience.type}
                   </span>
                 </div>
               </div>

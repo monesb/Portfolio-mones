@@ -89,23 +89,6 @@ const Hero = () => {
 
               {/* Boutons CTA */}
               <div className="flex flex-col sm:flex-row gap-4 mb-12">
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}
-                  className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all"
-                >
-                  Discutons de votre projet
-                </motion.button>
-                
-                <motion.a
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  href="#experiences"
-                  className="px-8 py-4 bg-white/10 backdrop-blur-sm text-white rounded-xl font-semibold text-lg border border-white/20 hover:bg-white/20 transition-all"
-                >
-                  Voir mes réalisations
-                </motion.a>
               </div>
 
               {/* Réseaux sociaux */}
