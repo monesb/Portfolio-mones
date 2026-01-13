@@ -9,11 +9,11 @@ const Experience = () => {
   const experiences = [
     {
       id: 1,
-      title: "Développeur Web (Alternance)",
+      title: "Développeur Web (Stage)",
       company: "CHEYSSOI PARIS",
-      period: "06/09/2024 - 03/07/2025",
+      period: "06/10/2024 - 03/01/2025",
       location: "Paris",
-      type: "Alternance",
+      type: "Stage",
       color: "from-blue-500 to-cyan-500",
       icon: <FaCode />,
       highlights: [
