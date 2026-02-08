@@ -1,4 +1,4 @@
-import { FaGraduationCap, FaCalendar, FaMapMarkerAlt, FaBook } from 'react-icons/fa';
+import { FaGraduationCap, FaCalendar, FaMapMarkerAlt } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import AnimatedSection from './AnimatedSection';
 
@@ -7,12 +7,12 @@ const Education = () => {
     {
       id: 1,
       degree: "Licence 3 Informatique Général",
-      school: "Lycée Charles de Foucauld - CNAM",
-      period: "2025 – 2026",
+      school: "CNAM (Conservatoire National des Arts et Métiers)",
+      period: "Septembre 2026 – Juillet 2027",
       location: "Paris",
-      status: "En cours",
+      status: "Prévue",
       color: "from-blue-500 to-cyan-500",
-      description: "Formation en alternance (2 jours école, 3 jours entreprise).",
+      description: "Reprise prévue en alternance (2 jours école, 3 jours entreprise). Acquisition de compétences avancées en développement logiciel, architecture des systèmes et gestion de projet.",
       highlight: true
     },
     {
@@ -23,7 +23,7 @@ const Education = () => {
       location: "Paris",
       status: "Diplômé",
       color: "from-purple-500 to-pink-500",
-      description: "Option SLAM (Solutions Logicielles et Applications Métiers).",
+      description: "Option SLAM (Solutions Logicielles et Applications Métiers). Formation axée sur le développement d'applications web et mobiles, programmation orientée objet et gestion de projet.",
       highlight: false
     },
     {
@@ -34,7 +34,7 @@ const Education = () => {
       location: "Le Bourget",
       status: "Diplômé",
       color: "from-green-500 to-emerald-500",
-      description: "Spécialités Mathématiques et Sciences Économiques et Sociales",
+      description: "Spécialités Mathématiques et Sciences Économiques et Sociales. Mention Assez Bien.",
       highlight: false
     }
   ];
@@ -48,7 +48,7 @@ const Education = () => {
               Mon <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600">Parcours Académique</span>
             </h2>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-              Un parcours académique solide qui combine théorie et pratique
+              Une formation solide et des perspectives de progression continue
             </p>
           </div>
         </AnimatedSection>
@@ -74,7 +74,7 @@ const Education = () => {
                   }`}>
                     {formation.highlight && (
                       <div className="absolute top-0 right-0 bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-1 rounded-bl-lg text-sm font-bold">
-                        Actuel
+                        Prochainement
                       </div>
                     )}
                     
@@ -83,7 +83,7 @@ const Education = () => {
                     </div>
                     
                     <div className={`inline-block px-4 py-1 rounded-full text-sm font-bold mb-4 ${
-                      formation.status === 'En cours' 
+                      formation.status === 'Prévue' 
                         ? 'bg-blue-100 text-blue-800'
                         : 'bg-green-100 text-green-800'
                     }`}>
@@ -105,8 +105,6 @@ const Education = () => {
                     </div>
                     
                     <p className="text-gray-700 mb-6">{formation.description}</p>
-                    
-                    {/* SECTION RETIRÉE (celle qui causait l'erreur) */}
                   </div>
                 </motion.div>
 

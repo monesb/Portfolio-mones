@@ -105,7 +105,6 @@ const Footer = () => {
               07 66 54 54 48
             </a>
           </p>
-          <p>Recherche active d'alternance pour la Licence 3 Informatique (2025-2026)</p>
           <p className="mt-4 text-xs text-gray-600">
             Portfolio développé avec React.js, Tailwind CSS & Framer Motion
           </p>

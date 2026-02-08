@@ -52,7 +52,7 @@ const Hero = () => {
               transition={{ duration: 0.8 }}
             >
               <div className="inline-block px-4 py-2 bg-blue-500/20 rounded-full mb-6">
-                <span className="text-blue-300 text-sm font-semibold">👋 Bonjour, je suis</span>
+                <span className="text-blue-300 text-sm font-semibold">👋 Développeur Full Stack</span>
               </div>
               
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
@@ -61,19 +61,20 @@ const Hero = () => {
               
               <h2 className="text-2xl md:text-3xl text-gray-300 mb-8">
                 <span className="relative inline-block">
-                  <span className="relative z-10">Développeur Full Stack</span>
+                  <span className="relative z-10">Titulaire d'un BTS SIO SLAM</span>
                   <span className="absolute bottom-0 left-0 w-full h-2 bg-blue-500/30 -rotate-1"></span>
                 </span>
               </h2>
               
               <p className="text-xl text-gray-400 mb-10 max-w-2xl">
-                Étudiant en Licence 3 Informatique au CNAM, je mets mes compétences en développement 
-                au service de projets innovants. Actuellement à la recherche d'une alternance pour 2025-2026.
+                Développeur full-stack avec expérience en React, PHP et C#. 
+                Je recherche un <strong className="text-blue-300">CDI</strong> pour contribuer sur le long terme, 
+                ou une <strong className="text-purple-300">alternance</strong> pour ma Licence 3 au CNAM à partir de septembre 2026.
               </p>
 
               {/* Technologies animées */}
               <div className="flex flex-wrap gap-4 mb-10">
-                {['React.js', 'PHP', 'C#', 'JavaScript', 'SQL', 'Python'].map((tech, idx) => (
+                {['React.js', 'PHP', 'C#', 'JavaScript', 'SQL', 'CSS'].map((tech, idx) => (
                   <motion.span
                     key={tech}
                     initial={{ opacity: 0, scale: 0 }}
@@ -87,11 +88,7 @@ const Hero = () => {
                 ))}
               </div>
 
-              {/* Boutons CTA */}
-              <div className="flex flex-col sm:flex-row gap-4 mb-12">
-              </div>
-
-              {/* Réseaux sociaux */}
+              {/* Réseaux sociaux SEULEMENT - PAS DE BOUTONS CTA */}
               <div className="flex gap-6">
                 <motion.a
                   whileHover={{ y: -5 }}
@@ -151,7 +148,7 @@ const Hero = () => {
                 </motion.div>
               ))}
 
-              {/* Photo de profil (à ajouter) */}
+              {/* Photo de profil */}
               <motion.div
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}

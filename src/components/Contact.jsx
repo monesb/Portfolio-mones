@@ -35,7 +35,7 @@ const Contact = () => {
 
   return (
     <section id="contact" className="py-20 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 relative overflow-hidden">
-      {/* Effets de fond */}
+      
       <div className="absolute inset-0">
         {[...Array(10)].map((_, i) => (
           <motion.div
@@ -72,7 +72,7 @@ const Contact = () => {
         </AnimatedSection>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* Informations de contact */}
+          
           <AnimatedSection delay={0.1} className="md:col-span-2 lg:col-span-1">
             <div className="space-y-6">
               {contactInfo.map((info, idx) => (
@@ -101,7 +101,7 @@ const Contact = () => {
                 </motion.a>
               ))}
 
-              {/* LinkedIn */}
+              
               <motion.a
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -125,7 +125,7 @@ const Contact = () => {
             </div>
           </AnimatedSection>
 
-          {/* CTA simplifié SANS BOUTONS */}
+          
           <AnimatedSection delay={0.2} className="md:col-span-2 lg:col-span-1">
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 h-full flex flex-col justify-center">
               <div className="text-center mb-8">
@@ -137,7 +137,7 @@ const Contact = () => {
                   Vous pouvez me contacter par email ou téléphone aux coordonnées indiquées.
                 </p>
                 
-                {/* Informations de contact directes */}
+                
                 <div className="space-y-4 mt-8">
                   <div className="flex items-center justify-center">
                     <FaEnvelope className="text-blue-400 text-xl mr-3" />
@@ -150,28 +150,13 @@ const Contact = () => {
                 </div>
               </div>
 
-              {/* Statut de disponibilité */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3 }}
-                className="p-6 rounded-2xl bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30"
-              >
-                <div className="flex items-center">
-                  <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse mr-3"></div>
-                  <div>
-                    <h4 className="text-white font-bold">Disponible pour alternance</h4>
-                    <p className="text-green-300 text-sm">Recherche active - 2025/2026</p>
-                    <p className="text-green-200 text-xs mt-2">Licence 3 Informatique - 2 jours école / 3 jours entreprise</p>
-                  </div>
-                </div>
-              </motion.div>
+              
+              
             </div>
           </AnimatedSection>
         </div>
 
-        {/* Section centres d'intérêt RETIRÉE */}
-        {/* Supprimée comme demandé */}
+       
       </div>
     </section>
   );
