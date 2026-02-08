@@ -1,4 +1,4 @@
-import { FaHeart, FaGithub, FaLinkedin, FaCode, FaArrowUp, FaFileDownload } from 'react-icons/fa';
+
 import { motion } from 'framer-motion';
 
 const Footer = () => {
@@ -105,6 +105,7 @@ const Footer = () => {
               07 66 54 54 48
             </a>
           </p>
+
           <p className="mt-4 text-xs text-gray-600">
             Portfolio développé avec React.js, Tailwind CSS & Framer Motion
           </p>

@@ -13,10 +13,7 @@ const Hero = () => {
     window.addEventListener('mousemove', handleMouseMove);
     return () => window.removeEventListener('mousemove', handleMouseMove);
   }, []);
-
-  const parallaxStyle = {
-    transform: `translate(${mousePosition.x * 0.01}px, ${mousePosition.y * 0.01}px)`,
-  };
+  
 
   return (
     <section id="accueil" className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
