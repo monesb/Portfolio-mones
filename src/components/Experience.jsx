@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { FaBuilding, FaCalendarAlt, FaCode, FaUsers, FaTools, FaChartLine } from 'react-icons/fa';
+import { FaBuilding, FaCalendarAlt, FaCode, FaUsers, FaTools, FaChartLine, FaServer, FaReact } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import AnimatedSection from './AnimatedSection';
 
@@ -7,6 +7,24 @@ const Experience = () => {
   const [activeExp, setActiveExp] = useState(0);
 
   const experiences = [
+    {
+      id: 5,
+      title: "Développeur Web Full-Stack (CDD)",
+      company: "La Poste",
+      period: "06/12/2025 - 06/04/2026",
+      location: "Paris",
+      type: "CDD",
+      color: "from-yellow-500 to-orange-500",
+      icon: <FaServer />,
+      highlights: [
+        "Développement d'interfaces web avec React.js (composants réutilisables et accessibles)",
+        "Optimisation des performances d'une interface interne (réduction du temps de chargement)",
+        "Développement et intégration d'API REST en Node.js/Express",
+        "Amélioration de la fluidité de l'application pour les utilisateurs",
+        "Travail en équipe Agile (daily meetings, sprints)"
+      ],
+      technologies: ["React.js", "Node.js", "Express", "JavaScript", "HTML5", "CSS3", "REST API", "Git"]
+    },
     {
       id: 1,
       title: "Développeur Web (Stage)",
@@ -19,11 +37,12 @@ const Experience = () => {
       highlights: [
         "Développement front-end responsive avec React.js, HTML5, CSS3",
         "Optimisation des performances et réduction de l'impact environnemental",
-        "Mise en place de l'architecture back-end en PHP et C#",
-        "Création et optimisation de bases de données SQL",
+        "Mise en place de l'architecture back-end en PHP",
+        "Migration d'EmailJS vers PHP pour une meilleure sécurité des données",
+        "Simplification de la stack technique (abandon de C#)",
         "Collaboration avec architectes, commerciaux et directeur artistique"
       ],
-      technologies: ["React.js", "JavaScript", "PHP", "C#", "SQL", "Git"]
+      technologies: ["React.js", "JavaScript", "PHP", "SQL", "Git", "EmailJS"]
     },
     {
       id: 2,
@@ -41,7 +60,7 @@ const Experience = () => {
         "Gestion de l'administration avec phpMyAdmin",
         "Tests et débogage d'applications web"
       ],
-      technologies: ["PHP", "Bootstrap", "JavaScript", "MySQL", "phpMyAdmin"]
+      technologies: ["PHP", "Bootstrap", "JavaScript", "MySQL", "phpMyAdmin", "Git"]
     },
     {
       id: 3,
@@ -81,7 +100,14 @@ const Experience = () => {
     }
   ];
 
-  const activeExperience = experiences[activeExp];
+  // Trier les expériences par date (plus récente en premier)
+  const sortedExperiences = [...experiences].sort((a, b) => {
+    const dateA = new Date(a.period.split(' - ')[0].split('/').reverse().join('-'));
+    const dateB = new Date(b.period.split(' - ')[0].split('/').reverse().join('-'));
+    return dateB - dateA;
+  });
+
+  const activeExperience = sortedExperiences[activeExp];
 
   return (
     <section id="experiences" className="py-20 bg-gradient-to-b from-gray-50 to-white">
@@ -104,7 +130,7 @@ const Experience = () => {
               {/* Ligne verticale */}
               <div className="absolute left-8 top-0 bottom-0 w-1 bg-gradient-to-b from-blue-500 to-purple-500"></div>
               
-              {experiences.map((exp, index) => (
+              {sortedExperiences.map((exp, index) => (
                 <motion.div
                   key={exp.id}
                   initial={{ opacity: 0, x: -50 }}
@@ -134,11 +160,13 @@ const Experience = () => {
                       <span className={`text-sm font-semibold px-3 py-1 rounded-full ${
                         exp.type === 'Stage' 
                           ? 'bg-blue-100 text-blue-800'
-                          : exp.type === 'Alternance'
+                          : exp.type === 'CDD'
                           ? 'bg-green-100 text-green-800'
+                          : exp.type === 'Alternance'
+                          ? 'bg-purple-100 text-purple-800'
                           : 'bg-yellow-100 text-yellow-800'
                       }`}>
-                        {exp.id === 2 ? "Stage" : exp.type}
+                        {exp.type}
                       </span>
                     </div>
                     
@@ -194,7 +222,7 @@ const Experience = () => {
                 
                 <div className="mt-4 md:mt-0">
                   <span className={`inline-block px-4 py-2 rounded-full text-white font-bold bg-gradient-to-r ${activeExperience.color}`}>
-                    {activeExperience.id === 2 ? "Stage" : activeExperience.type}
+                    {activeExperience.type}
                   </span>
                 </div>
               </div>
@@ -251,10 +279,10 @@ const Experience = () => {
               <div className="mt-8 pt-8 border-t border-gray-200">
                 <div className="flex justify-between items-center">
                   <span className="text-gray-600">
-                    Expérience {activeExp + 1} sur {experiences.length}
+                    Expérience {activeExp + 1} sur {sortedExperiences.length}
                   </span>
                   <div className="flex gap-2">
-                    {experiences.map((_, idx) => (
+                    {sortedExperiences.map((_, idx) => (
                       <button
                         key={idx}
                         onClick={() => setActiveExp(idx)}
